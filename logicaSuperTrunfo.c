@@ -114,6 +114,8 @@ int main() {
     printf("6. Pib per capita\n");
     printf("7. Super poder\n");
 
+    scanf("%d",&decisao);
+
     switch (decisao)
     {
     case 1:
@@ -121,9 +123,12 @@ int main() {
         printf("População da carta 1 é maior que a População da carta 2!\n");
         printf("%s vence!",nomeDaCidade);
     }
-    else{
+    else if (populacao2 > populacao){
         printf("População da carta 2 é maior que a População da carta 1!\n");
         printf("%s vence!\n",nomeDaCidade2);
+    }
+    else{
+        printf("Empate !");
     }
         break;
 
@@ -132,9 +137,12 @@ int main() {
         printf("Area da carta 1 é maior que a Area da carta 2!\n");
         printf("%s vence!",nomeDaCidade);
     }
-    else{
+    else if (quilometrosQuadrados2 > quilometrosQuadrados){
         printf("Area da carta 2 é maior que a Area da carta 1!\n");
         printf("%s vence!\n",nomeDaCidade2);
+    }
+    else{
+        printf("Empate !");
     }
     break;
     case 3:
@@ -142,9 +150,12 @@ int main() {
         printf("Pib da carta 1 é maior que a Pib da carta 2!\n");
         printf("%s vence!",nomeDaCidade);
     }
-    else{
+    else if (Pib2 > Pib){
         printf("Pib da carta 2 é maior que a Pib da carta 1!\n");
         printf("%s vence!\n",nomeDaCidade2);
+    }
+    else{
+        printf("Empate !");
     }
     break;
     case 4:
@@ -152,20 +163,27 @@ int main() {
         printf("carta 1 tem mais pontos turisticos que a carta 2!\n");
         printf("%s vence!",nomeDaCidade);
     }
-    else{
+    else if (QtdPontos_turisticos2 > QtdPontos_turisticos){
         printf("carta 2 tem mais pontos turisticos que a carta 1!\n");
         printf("%s vence!\n",nomeDaCidade2);
+    }
+    else{
+        printf("Empate !");
     }
     break;
 
     case 5:
+        // vence quem tem a menor densidade populacional
         if (DensidadePopulacional < DensidadePopulacional2){
         printf("DensidadePopulacional da carta 2 é maior que a DensidadePopulacional da carta 1!\n");
         printf("%s vence!",nomeDaCidade);
     }
-    else{
+    else if (DensidadePopulacional2 < DensidadePopulacional){
         printf("DensidadePopulacional da carta 1 é maior que a DensidadePopulacional da carta 2!\n");
         printf("%s vence!\n",nomeDaCidade2);
+    }
+    else{
+        printf("Empate !");
     }
     break;
 
@@ -174,9 +192,12 @@ int main() {
         printf("carta 1 tem PibPerCapita Maior que a carta 2!\n");
         printf("%s vence!",nomeDaCidade);
     }
-    else{
+    else if (PibPerCapita2 > PibPerCapita){
         printf("carta 2 tem PibPerCapita Maior que a carta 1!!\n");
         printf("%s vence!\n",nomeDaCidade2);
+    }
+    else{
+        printf("Empate !");
     }
     break;
 
@@ -185,16 +206,20 @@ int main() {
         printf("carta 1 tem SuperPoder Maior que a carta 2!\n");
         printf("%s vence!",nomeDaCidade);
     }
-    else{
+    else if (SuperPoder < SuperPoder2){
         printf("carta 2 tem SuperPoder Maior que a carta 1!!\n");
         printf("%s vence!\n",nomeDaCidade2);
     }
+    else{
+        printf("Empate !");
+    }
     break;
-
-    
     default:
+
+    printf("opção Invalida!\n");
         break;
     }
 
+    printf("\n");
     return 0;
 }
