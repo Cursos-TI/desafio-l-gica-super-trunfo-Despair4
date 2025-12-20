@@ -9,7 +9,7 @@ int main() {
 
     //Variaveis da carta 1
 	char estado;
-    char codigoDaCarta[5];
+    char codigoDaCarta[8];
     char nomeDaCidade[50];
     unsigned long int populacao = 0;
     float quilometrosQuadrados = 0;  
@@ -127,46 +127,60 @@ int main() {
 
     scanf("%d",&decisao2);
 
-    switch (decisao)
+switch (decisao)
     {
     case 1:
+        printf("População:\n %s %d VS %s %d ",nomeDaCidade,populacao,nomeDaCidade2,populacao2);
         resultado1 = populacao > populacao2 ? 
-        printf("População da carta 1 é maior que a População da carta 2!\n") :
-        printf("População da carta 2 é maior que a População da carta 1!\n");
-        break;
-
+        printf("%s",nomeDaCidade) :
+        printf("%s",nomeDaCidade2);
+        printf(" Vence!\n");
+    break;
     case 2:
-        resultado1 = quilometrosQuadrados > quilometrosQuadrados2 ? 
-        printf("Area da carta 1 é maior que a Area da carta 2!\n") :
-        printf("Area da carta 2 é maior que a Area da carta 1!\n");
+        printf("Area:\n %s %.2f VS %s %.2f ",nomeDaCidade,quilometrosQuadrados,nomeDaCidade2,quilometrosQuadrados2);
+        resultado1 = quilometrosQuadrados > quilometrosQuadrados2 ?
+        printf("%s",nomeDaCidade) :
+        printf("%s",nomeDaCidade2);
+        printf(" Vence!\n");
     break;
     case 3:
+        printf("Pib:\n %s %.2f VS %s %.2f ",nomeDaCidade,Pib,nomeDaCidade2,Pib2);
         resultado1 = Pib > Pib2 ? 
-        printf("Pib da carta 1 é maior que a Pib da carta 2!\n") :
-        printf("Pib da carta 2 é maior que a Pib da carta 1!\n");
+        printf("%s",nomeDaCidade) :
+        printf("%s",nomeDaCidade2);
+        printf(" Vence!\n");
     break;
     case 4:
+        printf("Quantidade de pontos turisticos:\n %s %d VS %s %d ",nomeDaCidade,QtdPontos_turisticos,nomeDaCidade2,QtdPontos_turisticos2);
         resultado1 = QtdPontos_turisticos > QtdPontos_turisticos2 ? 
-        printf("carta 1 Tem mais pontos turisticos que a carta 2!\n") :
-        printf("carta 2 Tem mais pontos turisticos que a carta 1!!\n");
+        printf("%s",nomeDaCidade) :
+        printf("%s",nomeDaCidade2);
+        printf(" Vence!\n");
     break;
 
     case 5:
-        resultado1 = DensidadePopulacional > DensidadePopulacional2 ? 
-        printf("carta 2 Tem densidade populacional maior a carta 1!\n") :
-        printf("carta 1 Tem densidade populacional maior a carta 2\n");
+        // vence a carta com menor densidade populacional
+        printf("Densidade populacional:\n %s %.2f VS %s %.2f ",nomeDaCidade,DensidadePopulacional,nomeDaCidade2,DensidadePopulacional2);
+        resultado1 = DensidadePopulacional < DensidadePopulacional2 ?
+        printf("%s",nomeDaCidade) :
+        printf("%s",nomeDaCidade2);
+        printf(" Vence!\n");
     break;
 
     case 6:
+        printf("Pib Per capita:\n %s %.2f VS %s %.2f ",nomeDaCidade,PibPerCapita,nomeDaCidade2,PibPerCapita2);
         resultado1 = PibPerCapita > PibPerCapita2 ? 
-        printf("carta 1 Tem pib per Capita maior que a carta 2!\n") :
-        printf("carta 2 Tem pib per Capita maior que a carta 1!\n");
+        printf("%s",nomeDaCidade) :
+        printf("%s",nomeDaCidade2);
+        printf(" Vence!\n");
     break;
 
         case 7:
-        resultado1 = SuperPoder > SuperPoder2 ? 
-        printf("carta 1 Tem SuperPoder maior que a carta 2!\n") :
-        printf("carta 2 Tem SuperPoder maior que a carta 1!\n");
+        printf("Super poder:\n %s %.2f VS %s %.2f ",nomeDaCidade,SuperPoder,nomeDaCidade2,SuperPoder2);
+        resultado1 = SuperPoder > SuperPoder2 ?
+        printf("%s",nomeDaCidade) :
+        printf("%s",nomeDaCidade2);
+        printf(" Vence!\n");
     break;
     default:
 
@@ -182,43 +196,55 @@ int main() {
     switch (decisao2)
     {
     case 1:
+        printf("População:\n %s %d VS %s %d ",nomeDaCidade,populacao,nomeDaCidade2,populacao2);
         resultado2 = populacao > populacao2 ? 
-        printf("População da carta 1 é maior que a População da carta 2!\n") :
-        printf("População da carta 2 é maior que a População da carta 1!\n");
-        break;
-
+        printf("%s",nomeDaCidade) :
+        printf("%s",nomeDaCidade2);
+        printf(" Vence!\n");
+    break;
     case 2:
-        resultado2 = quilometrosQuadrados > quilometrosQuadrados2 ? 
-        printf("Area da carta 1 é maior que a Area da carta 2!\n") :
-        printf("Area da carta 2 é maior que a Area da carta 1!\n");
+        printf("Area:\n %s, %.2f VS %s %.2f ",nomeDaCidade,quilometrosQuadrados,nomeDaCidade2,quilometrosQuadrados2);
+        resultado2 = quilometrosQuadrados > quilometrosQuadrados2 ?
+        printf("%s",nomeDaCidade) :
+        printf("%s",nomeDaCidade2);
+        printf(" Vence!\n");
     break;
     case 3:
+        printf("Pib:\n %s, %.2f VS %s %.2f ",nomeDaCidade,Pib,nomeDaCidade2,Pib2);
         resultado2 = Pib > Pib2 ? 
-        printf("Pib da carta 1 é maior que a Pib da carta 2!\n") :
-        printf("Pib da carta 2 é maior que a Pib da carta 1!\n");
+        printf("%s",nomeDaCidade) :
+        printf("%s",nomeDaCidade2);
+        printf(" Vence!\n");
     break;
     case 4:
+        printf("Quantidade de pontos turisticos:\n %s %d VS %s %d ",nomeDaCidade,QtdPontos_turisticos,nomeDaCidade2,QtdPontos_turisticos2);
         resultado2 = QtdPontos_turisticos > QtdPontos_turisticos2 ? 
-        printf("carta 1 Tem %d pontos turisticos que é maior que a carta 2!\n") :
-        printf("carta 2 Tem mais pontos turisticos que a carta 1!!\n");
+        printf("%s",nomeDaCidade) :
+        printf("%s",nomeDaCidade2);
+        printf(" Vence!\n");
     break;
-
-    case 5:   
-        resultado2 = DensidadePopulacional > DensidadePopulacional2 ? 
-        printf("carta 2 Tem densidade populacional %d que é maior a carta 1!\n") :
-        printf("carta 1 Tem densidade populacional %d que é maior a carta 2\n");
+    case 5:
+        // vence a carta com menor densidade populacional
+        printf("Densidade populacional:\n %s %.2f VS %s %.2f ",nomeDaCidade,DensidadePopulacional,nomeDaCidade2,DensidadePopulacional2);
+        resultado2 = DensidadePopulacional < DensidadePopulacional2 ?
+        printf("%s",nomeDaCidade) :
+        printf("%s",nomeDaCidade2);
+        printf(" Vence!\n");
     break;
-
     case 6:
+        printf("Pib Per capita:\n %s %.2f VS %s %.2f ",nomeDaCidade,PibPerCapita,nomeDaCidade2,PibPerCapita2);
         resultado2 = PibPerCapita > PibPerCapita2 ? 
-        printf("carta 1 Tem pib per Capita %d que é maior que a carta 2!\n",PibPerCapita) :
-        printf("carta 2 Tem pib per Capita %d que é maior que a carta 1!\n",PibPerCapita2);
+        printf("%s",nomeDaCidade) :
+        printf("%s",nomeDaCidade2);
+        printf(" Vence!\n");
     break;
 
         case 7:
-        resultado2 = SuperPoder > SuperPoder2 ? 
-        printf("carta 1 Tem SuperPoder %d que é maior a carta 2!\n",SuperPoder) :
-        printf("carta 2 Tem SuperPoder %d que é maior que a carta 1!\n",SuperPoder2);
+        printf("Super poder:\n %s %.2f VS %s %.2f ",nomeDaCidade,SuperPoder,nomeDaCidade2,SuperPoder2);
+        resultado2 = SuperPoder > SuperPoder2 ?
+        printf("%s",nomeDaCidade) :
+        printf("%s",nomeDaCidade2);
+        printf( "Vence!\n");
     break;
     default:
 
